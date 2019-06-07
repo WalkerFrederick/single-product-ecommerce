@@ -1,0 +1,21 @@
+$brand: #ff8a65;
+$background: #eee;
+$text: #212121;
+
+;
+
+.App {
+  height: 200vh;
+  width: 100vw;
+
+  background:$background;
+}
+.Nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 65px;
+  background: white;
+  border-top: 4px solid $brand; 
+}
