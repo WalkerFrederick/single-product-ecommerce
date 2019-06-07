@@ -23,7 +23,8 @@ class App extends Component {
       <div className="App">
         <nav>
           <div className="Nav">
-            
+            <h1>urphone</h1>
+            <button>Buy</button>
           </div>
         </nav>
       </div>
