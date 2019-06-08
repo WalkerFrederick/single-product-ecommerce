@@ -30,7 +30,7 @@ router.get('/phoneimage', function(req, res, next) {
   res.sendFile(__dirname + `\\images\\phone.png`)
 });
 
-app.get('*', (req, res) => {
+router.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/app/build/index.html'));
 });
 

@@ -4,6 +4,8 @@
 */node_modules
 */.pnp
 *.pnp.js
+app/node_modules/
+app/build/
 
 # testing
 */coverage
@@ -27,3 +29,4 @@
 v1-logos
 icons
 .vscode
+/app/node_modules
