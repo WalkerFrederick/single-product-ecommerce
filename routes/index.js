@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+
+
 /* GET products */
 router.get('/products', function(req, res, next) {
   res.json([
@@ -26,6 +28,10 @@ router.get('/products', function(req, res, next) {
 router.get('/phoneimage', function(req, res, next) {
   console.log(__dirname + '\\images/phone.png')
   res.sendFile(__dirname + `\\images\\phone.png`)
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/app/build/index.html'));
 });
 
 module.exports = router;
