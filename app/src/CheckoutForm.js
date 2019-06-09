@@ -12,10 +12,14 @@ class CheckoutForm extends Component {
 
   async submit(ev) {
     let {token} = await this.props.stripe.createToken({name: "Name"});
+    let data = {
+      token: token.id,
+      product: this.props.item,
+    }
     let response = await fetch("/checkout", {
       method: "POST",
       headers: {"Content-Type": "text/plain"},
-      body: token.id
+      body: JSON.stringify(data)
     });
   
     if (response.ok) this.setState({complete: true})

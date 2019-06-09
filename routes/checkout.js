@@ -13,12 +13,14 @@ router.get('/cancel', function(req, res, next) {
   });
 router.post("/", async (req, res) => {
     try {
+        let data = JSON.parse(req.body)
         let {status} = await stripe.charges.create({
-        amount: 2000,
+        amount: data.product.productPrice,
         currency: "usd",
         description: "An example charge",
-        source: req.body
+        source: data.token
         });
+
 
         res.json({status});
     } catch (err) {

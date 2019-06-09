@@ -10,6 +10,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      product: {},
       productName: 'product name',
       productDesc: 'product desc,'
     }
@@ -18,6 +19,7 @@ class App extends Component {
   componentDidMount() {
     fetch('/products').then(res => res.json()).then(res =>
       this.setState({
+        product: res[0],
         productName: res[0].productName,
         productDesc: res[0].productDesc
       })
@@ -47,7 +49,7 @@ class App extends Component {
           <div className="checkout-form">
             <h1>Buy Now</h1>
             <Elements>
-              <CheckoutForm />
+              <CheckoutForm item={this.state.product}/>
             </Elements>
           </div>
         </StripeProvider>

@@ -9,19 +9,19 @@ router.get('/products', function(req, res, next) {
     {productName: 'urphone',
      productType: 'phone',
      productDesc: 'A great phone that will knock your socks off',
-    productPrice: 150},
+    productPrice: 15000},
     {productName: 'urphone plus',
     productType: 'phone',
      productDesc: 'A great phone that will knock your socks off again',
-    productPrice: 150},
+    productPrice: 15000},
     {productName: 'urphone case',
     productType: 'case',
     productDesc: 'A great phone case that will knock your socks off',
-    productPrice: 12},
+    productPrice: 1200},
     {productName: 'urphone case plus',
     productType: 'case',
     productDesc: 'A great phone case that will knock your socks off',
-    productPrice: 19},
+    productPrice: 1900},
   ]);
 });
 
