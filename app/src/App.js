@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './App.scss';
 import phone from './images/phone.png'
 
+import {Elements, StripeProvider} from 'react-stripe-elements';
+import CheckoutForm from './CheckoutForm';
+
 class App extends Component {
 
   constructor() {
@@ -40,6 +43,14 @@ class App extends Component {
             <button>View Options</button>
           </div>
         </section>
+        <StripeProvider apiKey="pk_test_lONZ8adrBqGGKcuUbPtqgyrn00dEmUEcZ3">
+          <div className="checkout-form">
+            <h1>Buy Now</h1>
+            <Elements>
+              <CheckoutForm />
+            </Elements>
+          </div>
+        </StripeProvider>
       </div>
     );
   }
